@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nodejs-todo-app:
+    image: nodejs-todo-app:latest
+    container_name: nodejs-todo-container
+    ports:
+      - "3000:3000"
+    restart: always
+    working_dir: /app
+    command: ["node", "index.js"]
